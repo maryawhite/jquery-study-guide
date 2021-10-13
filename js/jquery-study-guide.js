@@ -42,7 +42,11 @@ $(document).ready(function(){
 
     $("img").hover(function(){
         $(this).attr("src", "img/pineapple.svg");
-    });
+    },
+        function(){
+        $(this).attr("src", "img/apple.svg");
+        }
+    );
 
     $("#refresh").click(function(){
         location.reload(true);
@@ -55,6 +59,15 @@ $(document).ready(function(){
     console.log($(".styled").css("color"));
 
     $(".styled2").css({"color":"darkblue", "font-size":"18px"});
+
+    var myCode = ""
+    $(document).keyup(function(event){
+        // console.log(event.key);  //you can use event.keyCode to get the keyCode instead
+        myCode = myCode + event.key
+        if(myCode === "ArrowUpArrowUpArrowDownArrowDown"){
+            $("body").css("background", "linear-gradient(#e66465, #9198e5) fixed");
+        }
+    });
 
 
 });
