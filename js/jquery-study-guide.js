@@ -39,4 +39,22 @@ $(document).ready(function(){
     $("#change3").click(function(){
         $(this).val("Goodbye");
     });
+
+    $("img").hover(function(){
+        $(this).attr("src", "img/pineapple.svg");
+    });
+
+    $("#refresh").click(function(){
+        location.reload(true);
+    });
+
+    $("#add-remove").click(function(){
+        $("#change-class").toggleClass("d-none");
+    });
+
+    console.log($(".styled").css("color"));
+
+    $(".styled2").css({"color":"darkblue", "font-size":"18px"});
+
+
 });
