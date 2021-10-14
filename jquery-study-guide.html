@@ -31,14 +31,14 @@
             </ul>
         <li>Use the document ready event listener and put your code inside.</li>
     </ul>
-<div id="mycards" class="d-flex flex-column flex-sm-row">
-        <div class="d-flex card m-1" style="width: 18rem;">
+    <div class="d-flex">
+        <div class="d-flex col-6 card m-1" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title text-primary">Document Ready</h5>
                 <p class="card-text">We can use JQuery to select the document object and add an event listener called ready. This event listener will fire as soon as the DOM is ready to be manipulated, but before all images are downloaded. Passing an anonymous function in ready () will execute our code when the document is ready for JavaScript manipulation. <br> Example:<span class="make-bold"> $(document).ready(function(){ <br> alert("the document has finished loading!"); <br>});</span></p>
             </div>
         </div>
-        <div class="card d-flex m-1" style="width: 18rem;">
+        <div class="card d-flex col-6 m-1" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title text-primary">Commonly Used JQuery Selectors</h5>
                 <p>JQuery selectors allow you to select and manipulate HTML elements</p>
@@ -52,7 +52,9 @@
                 </ul>
             </div>
         </div>
-        <div class="card d-flex m-1" style="width: 18rem;">
+    </div>
+    <div class="d-flex">
+        <div class="card d-flex col-6 m-1" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title text-primary">Commonly Used JQuery Event Methods</h5>
                 <ul>
@@ -67,7 +69,24 @@
                 <div id="mouse-event">Mouse Enter/Leave</div>
             </div>
         </div>
-</div>
+        <div class="card d-flex col-6 m-1" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-primary">Traversal Methods</h5>
+                <ul>
+                    <li>each()</li>
+                    <li>first()</li>
+                    <li>last</li>
+                    <li>parent()</li>
+                    <li>children()</li>
+                    <li>next()</li>
+                </ul>
+                <button id="button-7" type="button" class="btn btn-primary m-2">Placeholder</button>
+                <button id="button-8" type="button" class="btn btn-dark d-flex flex-block m-2">Placeholder</button>
+                <div id="button-9">Placeholder</div>
+            </div>
+        </div>
+    </div>
+
     <div>
         <p class="toggled">You can toggle between hiding and showing elements, or classes, or ids, using the toggle method</p>
         <p class="toggled">Click the button to watch these 2 paragraphs with the same class name disappear and reappear</p>
@@ -75,11 +94,15 @@
     </div>
     <div>
         <h3 class="mt-2">JQuery DOM Manipulation</h3>
-        <p>Three common methods for DOM manipulation are:</p>
+        <p>Some common methods for DOM manipulation are:</p>
         <ul id="get-html">
             <li>text()</li>
             <li>html()</li>
             <li>val()</li>
+            <li>css()</li>
+            <li>addClass()</li>
+            <li>removeClass()</li>
+            <li>toggleClass()</li>
         </ul>
         <a href="https://www.w3schools.com/jquery/jquery_dom_get.asp" id="w3s">Check out W3 Schools' Reference</a>
         <p>You can get or set the text, html, and/or value using these methods</p>
@@ -106,8 +129,17 @@
     <p class="styled mt-2" style="color: darkred">The css method css() allows you to return one or more style properties for the selected element.</p>
     <p class="styled2 mt-2">The css method also allows you to set one or more style properties for the selected element.</p>
     <p>You can set multiple css properties using this syntax: <br>css({"color":"darkblue", "font-size":"18px"});</p>
-
-
+    <h3>AJAX Requests</h3>
+    <p>AJAX - Asynchronous JavaScript and XML. AJAX is not a programming language. AJAX is a way to communicate with a server, sending or retrieving data without refreshing the current page.</p>
+    <p>JSON - JavaScript Object Notation. JSON object properties are double-quoted strings <br>{"name1": "value1", <br>"name2": "value2"}</p>
+    <p>Using JQuert to call an AJAX request: $.ajax("/some-url") or <br>$.ajax("/some-url", {<br>
+        type: "POST",<br>
+        data: { <br>
+        name:     "John", <br>
+        location: "Boston" <br>
+        } <br>
+        });</p>
+    <p>.done. the .done method should be attached to the AJAX request. JQuery calls the function when the AJAX request has come back successfully.  </p>
 
 
 </div> <!--end of div container-->
