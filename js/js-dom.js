@@ -31,3 +31,22 @@ function toggleVisibility(){
         }
     }
 }
+
+//add a margin to the top of the form element
+document.querySelector("form").style.marginTop = "1em";
+
+//change the word on the submit button be send
+var submit = document.querySelector("input[type='submit']");
+submit.value="SEND";
+
+//change the value of the first name input field to Hello World
+var input = document.querySelector("input");
+input.value = "hello World";
+
+//change the ul list items to red
+var item = document.querySelector('.list-group-item');
+item.style.color = "red";
+
+//change only the last list item in the ul
+var lastItem = document.querySelector('.list-group-item li:last-child');
+lastItem.style.color = "blue";
